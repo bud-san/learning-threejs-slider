@@ -6,9 +6,28 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "lint": "biome check --write",
+    "format": "biome format --write"
   },
   "dependencies": {
-    "astro": "^5.13.11"
+    "@astrojs/react": "^4.3.1",
+    "@tailwindcss/vite": "^4.1.13",
+    "@types/react": "^19.1.13",
+    "@types/react-dom": "^19.1.9",
+    "astro": "^5.13.11",
+    "gsap": "^3.13.0",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "simplex-noise": "^4.0.3",
+    "tailwindcss": "^4.1.13",
+    "three": "^0.180.0"
+  },
+  "volta": {
+    "node": "20.17.0"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.2.4",
+    "@types/three": "^0.180.0"
   }
 }

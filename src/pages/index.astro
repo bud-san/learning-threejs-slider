@@ -1,16 +1,63 @@
 ---
+import { ThreeImageSlider } from "../components/ThreeImageSlider";
+import { ThreeImageSlider2 } from "../components/ThreeImageSlider2";
+import { ThreeImageSlider3 } from "../components/ThreeImageSlider3";
+import Layout from "../layouts/Layout.astro";
 
+const title = "Sample Three Slider";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout {title}>
+  <main class="space-y-12">
+    <section class="space-y-2">
+      <h1 class="text-3xl font-bold">three.js + αでいろんなスライダー</h1>
+    </section>
+
+    <section class="space-y-2">
+      <h2 class="text-xl font-semibold">クロスフェードのみ</h2>
+      <div class="pt-2">
+        <ThreeImageSlider client:load
+          images={["/images/img1.jpg", "/images/img2.jpg", "/images/img3.jpg"]}
+          width={960}
+          height={540}
+          autoPlayMs={4000} 
+          crossfadeMs={1500} 
+          className="rounded-lg shadow ring-1 ring-black/10 overflow-hidden"
+        />
+      </div>
+    </section>
+    <section class="space-y-2">
+      <h2 class="text-xl font-semibold">スライド + ディスプレイスメント</h2>
+      <div class="pt-2">
+        <ThreeImageSlider2 
+          client:load
+          images={["/images/img1.jpg", "/images/img2.jpg", "/images/img3.jpg"]}
+          displacementImage="/images/displacement3.png"
+          width={960}
+          height={540}
+          autoPlay={true}
+          autoPlayMs={4000}
+          className="rounded-lg shadow ring-1 ring-black/10 overflow-hidden"
+        />
+      </div>
+    </section>
+
+
+    <section class="space-y-2">
+      <h2 class="text-xl font-semibold">クロスフェード + パーリンノイズ生成</h2>
+      <div class="pt-2">
+        <ThreeImageSlider3 
+          client:load
+          images={["/images/img1.jpg", "/images/img2.jpg", "/images/img3.jpg"]}
+          width={960}
+          height={540}
+          autoPlayMs={4000}
+          crossfadeMs={2500}
+          noiseScale={10}
+          noiseIntensity={0.1}
+          className="rounded-lg shadow ring-1 ring-black/10 overflow-hidden"
+        />
+      </div>
+    </section>
+  </main>
+</Layout>

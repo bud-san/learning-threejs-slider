@@ -1,43 +1,26 @@
-# Astro Starter Kit: Minimal
+# 概要
 
-```sh
-bun create astro@latest -- --template minimal
+Cursorで作ったthree.js製スライダーのサンプルです。
+
+```
+新しいプロジェクトを作りたいです。  
+- JavaScriptランタイム: Bun
+- Voltaでnodeのバージョンも記載すること
+- フレームワーク: Astro 
+- UI: React  
+- 言語: TypeScript  
+- CSS: TailwindCSS
+- three.js を後で利用する予定なので依存関係に追加
+- biomejsを導入
+- 必要であれば.editorconfigも挿入する
+- プロジェクト名は "sample-three-slider"
+
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+- クロスフェードのみ
+- 横にスライド + ディスプレイスメント画像を用いた効果
+- クロスフェード + パーリンノイズ生成を用いたゆらぎ効果
 
-## 🚀 Project Structure
+# 参考サイト
 
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `bun install`             | Installs dependencies                            |
-| `bun dev`             | Starts local dev server at `localhost:4321`      |
-| `bun build`           | Build your production site to `./dist/`          |
-| `bun preview`         | Preview your build locally, before deploying     |
-| `bun astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `bun astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+https://tympanus.net/Development/DistortionHoverEffect/

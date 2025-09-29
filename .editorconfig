@@ -1,0 +1,16 @@
+# http://editorconfig.org
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+indent_style = space
+indent_size = 2
+trim_trailing_whitespace = true # 行末の空白文字を削除するかどうか
+insert_final_newline = true # 保存時に自動でファイルの最後に改行文字を追加するかどうか（SourceTreeでコミット時にエラーが出るのを防ぐ）
+
+[*.{md,markdown,mdx}]
+trim_trailing_whitespace = false
+
+[*.tsx]
+trim_trailing_whitespace = false
